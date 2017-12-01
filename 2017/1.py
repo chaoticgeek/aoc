@@ -15,6 +15,16 @@ def captcha(number):
         captcha_sum += int(number[-1])
     return captcha_sum
 
+def captcha2(number):
+    captcha_sum = 0
+    number_len = int(len(number)/2)
+    halfs = [number[:number_len], number[number_len:]]
+    for i in range(number_len):
+        if halfs[0][i] == halfs[1][i]:
+            captcha_sum += int(halfs[0][i])*2
+    return captcha_sum
+
 if __name__ == '__main__':
     # Make it take system input numbers if I'm feeling bored?
-    print("Captcha sum is {}".format(captcha(aoc_1)))
+    print("Captcha 1 sum is {}".format(captcha(aoc_1)))
+    print("Captcha 2 sum is {}".format(captcha2(aoc_2)))
