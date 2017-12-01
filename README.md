@@ -1,0 +1,3 @@
+# Advent of Code Challenges
+
+Please don't judge me for the atrocities I commit on these. Trying to go fast and score points.
